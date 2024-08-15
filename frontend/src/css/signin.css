@@ -1,0 +1,162 @@
+/* signin Form Styles */
+
+.signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d3dce6; /* Slightly darker grey background */
+  padding: 20px;
+}
+
+.signin-overlay {
+  background-color: rgba(151, 144, 144, 0.671); /* Transparent gray overlay */
+  position: fixed; /* Use fixed positioning to cover the entire viewport */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  padding: 20px; /* Inner padding */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Center text */
+  z-index: 9999; /* Ensure it is above other elements */
+}
+
+.signin-container {
+  background-image: url("/PCNJBG.jpg"); /* Replace with your image URL */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Place behind other content */
+}
+
+.signin-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background-color: #ffffff; /* White background for the form */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow for depth */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signin-form h2 {
+  align-self: center;
+  margin-bottom: 20px;
+  color: #2c3e50; /* Dark blue text for the heading */
+}
+
+.signin-form label {
+  align-self: flex-start;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #34495e; /* Darker grey labels */
+}
+
+.signin-form input[type="text"],
+.signin-form input[type="email"],
+.signin-form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #bdc3c7; /* Light grey border */
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.signin-form input[type="text"]:focus,
+.signin-form input[type="email"]:focus,
+.signin-form input[type="password"]:focus {
+  border-color: #3498db; /* Light blue border on focus */
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.2); /* Light blue shadow on focus */
+  outline: none;
+}
+
+.signin-form button[type="submit"] {
+  width: 30%;
+  padding: 12px;
+  background-color: #2294d6; /* Green background */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-bottom: 10px;
+}
+
+.signin-form button[type="submit"]:hover {
+  background-color: #16a085; /* Darker green on hover */
+}
+
+.signin-form .error-message {
+  color: #e74c3c; /* Red color for error messages */
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.signin-form p {
+  color: #34495e;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.signin-form .back-button {
+  align-self: flex-start; /* Align to the left */
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s; /* Smooth transition */
+  margin-bottom: auto;
+}
+
+.signin-form .back-button i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.signin-form .back-button:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+.success-message {
+  color: #28a745; /* Green color for success */
+  margin-bottom: 20px; /* Space below the message */
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-group .form-control {
+  padding-right: 40px; /* Adjust based on your icon size */
+}
+
+.input-group .input-group-text {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust to fit the padding */
+  transform: translateY(-170%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}

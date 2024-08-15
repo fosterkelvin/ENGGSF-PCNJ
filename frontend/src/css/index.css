@@ -1,0 +1,116 @@
+.landing-page-container {
+  position: relative;
+  background-image: url('/PCNJBG.jpg'); /* Image URL */
+  background-size: cover; /* Cover the entire container */
+  background-position: center 5%; /* Move the image lower */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Place behind other content */
+  color: #ffffff; /* White text for contrast */
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column; /* Arrange children vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  min-height: 100vh; /* Ensure it covers the viewport height */
+  width: 100vw; /* Full viewport width */
+  text-align: center; /* Center text */
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+.landing-page-overlay1 {
+  background-color: rgba(151, 144, 144, 0.671); /* Transparent gray overlay */
+  position: fixed; /* Use fixed positioning to cover the entire viewport */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  padding: 20px; /* Inner padding */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Center text */
+  z-index: 9999; /* Ensure it is above other elements */
+}
+
+.landing-page-overlay2 {
+  background-color: rgba(243, 231, 69, 0); /* Transparent gray overlay */
+  position: absolute; /* Use absolute positioning */
+  top: 50%; /* Center vertically */
+  left: 45%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position to center */
+  width: 80%; /* Adjust width */
+  max-width: 400px; /* Max width for larger screens */
+  padding: 20px; /* Inner padding */
+  border-radius: 10px; /* Curved edges */
+  text-align: center; /* Center text */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
+
+.responsive-heading {
+  margin: 10px 0 20px; /* Margins */
+  font-size: clamp(1.5em, 5vw + 1em, 3em); /* Responsive font size */
+}
+
+.signup-button {
+  background-color: #092fd6; /* Button color */
+  color: #ffffff; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px; /* Larger padding for a bigger button */
+  font-size: 1.2em; /* Button font size */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+  margin-top: 10px; /* Space between heading and button */
+}
+
+.signup-button:hover {
+  background-color: #31af0b; /* Hover color */
+  color: #ffffff; /* Hover text color */
+  transform: scale(1.05); /* Scale on hover */
+}
+
+.signup-button:active {
+  transform: scale(1); /* Reset size on click */
+}
+
+@media (max-width: 768px) {
+  .landing-page-overlay {
+    width: 90%; /* Adjust overlay width for smaller screens */
+  }
+
+  .signup-button {
+    font-size: 1em; /* Adjust button font size */
+    padding: 8px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-page-overlay {
+    width: 100%; /* Full width on very small screens */
+    height: auto; /* Auto height */
+  }
+
+  .signup-button {
+    font-size: 0.9em; /* Adjust button font size */
+    padding: 6px; /* Adjust padding */
+  }
+}
+
+.landing-page-content {
+  transform: translateY(20%);
+  max-width: 80%; /* Limit content width for readability */
+  max-height: 50%; /* Limit content height for readability */
+  margin: 0 auto; /* Center content horizontally */
+  padding: 0px; /* Add padding for inner spacing */
+  background-color: rgb(131, 115, 115); /* Transparent gray background */
+  border-radius: 10px; /* Add border radius for curved edges */
+}
+
+.landing-page .button-right {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2%;
+}
