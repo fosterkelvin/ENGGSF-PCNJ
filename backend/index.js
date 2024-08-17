@@ -17,7 +17,7 @@ app.use(cookieParser());
 app.use("/auth", userRouter);
 
 mongoose.connect(
-  "mongodb+srv://admin:Admin123@pcnj.i91n9my.mongodb.net/pcnjDB"
+  "mongodb+srv://enggsfpcnj:j910KsvJD8ss5nvM@pcnj.pbgm3.mongodb.net/pcnjDB"
 );
 
 app.listen(process.env.PORT, () => {
