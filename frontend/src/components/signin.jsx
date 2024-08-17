@@ -85,8 +85,17 @@ const Signin = () => {
         }
       })
       .catch((error) => {
-        console.log(error);
-        setErrors({ ...errors, password: "Invalid email or password." });
+        console.log("Error during signin:", error);
+        if (error.response) {
+          console.log("Error response:", error.response);
+          setErrors({ ...errors, password: error.response.data.message || "Invalid email or password." });
+        } else if (error.request) {
+          console.log("Error request:", error.request);
+          setErrors({ ...errors, password: "No response from server." });
+        } else {
+          console.log("Error message:", error.message);
+          setErrors({ ...errors, password: "Request failed. Please try again." });
+        }
       });
   };
 

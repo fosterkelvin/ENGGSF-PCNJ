@@ -54,15 +54,15 @@ router.post("/signin", async (req, res) => {
 
   // Send verification code to the user's email
   const transporter = nodemailer.createTransport({
-    service: "gmail", // replace with your email provider
+    service: "outlook", // replace with your email provider
     auth: {
       user: process.env.MY_EMAIL, // your email address
-      pass: process.env.MY_PASSWORD, // your email password
+      pass: process.env.MY_PASSWORD, // your email/app password
     },
   });
 
   const mailOptions = {
-    from: process.env.EMAIL,
+    from: process.env.MY_EMAIL,
     to: email,
     subject: "Your Verification Code",
     text: `Your verification code is ${verificationCode}`,
@@ -128,7 +128,7 @@ router.post("/forgotpassword", async (req, res) => {
     });
 
     var transporter = nodemailer.createTransport({
-      service: "gmail",
+      service: "outlook",
       auth: {
         user: process.env.MY_EMAIL,
         pass: process.env.MY_PASSWORD,
